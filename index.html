@@ -196,7 +196,6 @@
 
 
 <!-- experiment -->
-
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -206,40 +205,34 @@
       </div>
       <br>
 
-      <!-- First section: Left Title, Right Image, Text Below -->
+      <!-- First section: Benchmark -->
       <div class="columns">
         <div class="column is-half">
           <h3 class="title is-4">Navsim Benchmark</h3>
         </div>
       </div>
-      <!-- Image below the title -->
       <div style="text-align:center;">
         <img src="static/images/table.png" alt="Descriptive image" style="width: 80%; height: auto;" />
       </div>
-      <!-- Text Below Image -->
       <div class="columns">
         <div class="column is-full">
-          <p style="text-align:center; font-size: 1em;">
-            <ul style="text-align:left; margin-left: 20px;">
-              <li>AdaThinkDrive achieves a PDMS of 90.3 in the vision-only setting, setting a new SOTA. It improves PDMS by 1.7 over Hydra-NeXt, showing better modeling and trajectory prediction.</li>
-              <li>In best-of-N planning, AdaThinkDrive selects the optimal trajectory from four candidates, reaching a PDMS of 93.0.</li>
-            </ul>
-          </p>        
+          <ul style="text-align:left; margin-left: 20px; font-size: 1em;">
+            <li>AdaThinkDrive achieves a PDMS of 90.3 in the vision-only setting, setting a new SOTA. It improves PDMS by 1.7 over Hydra-NeXt, showing better modeling and trajectory prediction.</li>
+            <li>In best-of-N planning, AdaThinkDrive selects the optimal trajectory from four candidates, reaching a PDMS of 93.0.</li>
+          </ul>
         </div>
       </div>
       <br>
 
-      <!-- Second section: Left Title, Right Image, Text Below -->
+      <!-- Second section: Visualization -->
       <div class="columns">
         <div class="column is-half">
           <h3 class="title is-4">Navsim Visualization</h3>
         </div>
       </div>
-      <!-- Image below the title -->
       <div style="text-align:center;">
         <img src="static/images/fig6.jpg" alt="Descriptive image" style="width: 80%; height: auto;" />
       </div>
-      <!-- Text Below Image -->
       <div class="columns">
         <div class="column is-full">
           <p style="text-align:center; font-size: 1em;">
@@ -247,37 +240,28 @@
           </p>
         </div>
       </div>
+      <br>
 
       <!-- Third section: Performance Analysis -->
       <h3 class="title is-4" style="text-align:left;">Performance Analysis of AdaThinkDrive</h3>
       <br>
 
-      <style>
-        .equal-img {
-          width: 400px;
-          height: 300px;
-          object-fit: cover;
-          border-radius: 6px;
-        }
-        .fig-caption {
-          font-size: 0.9em;
-          margin-top: 6px;
-          text-align: center;
-        }
-      </style>
-
       <!-- Row 1 -->
       <div class="columns is-variable is-5">
         <div class="column is-half">
           <figure style="text-align:center;">
-            <img src="static/images/result2.png" alt="Vision-only PDMS comparison" class="equal-img">
-            <figcaption class="fig-caption">(a) Vision-only PDMS vs. baselines on Navsim.</figcaption>
+            <img src="static/images/perf_1.jpg" alt="Vision-only PDMS comparison" style="width:100%; height:auto;">
+            <figcaption style="font-size:0.9em; margin-top:6px; text-align:center;">
+              (a) Vision-only PDMS vs. baselines on Navsim.
+            </figcaption>
           </figure>
         </div>
         <div class="column is-half">
           <figure style="text-align:center;">
-            <img src="static/images/result3.png" alt="Best-of-N planning results" class="equal-img">
-            <figcaption class="fig-caption">(b) Best-of-N planning (N=4) performance.</figcaption>
+            <img src="static/images/perf_2.jpg" alt="Best-of-N planning results" style="width:100%; height:auto;">
+            <figcaption style="font-size:0.9em; margin-top:6px; text-align:center;">
+              (b) Best-of-N planning (N=4) performance.
+            </figcaption>
           </figure>
         </div>
       </div>
@@ -286,14 +270,18 @@
       <div class="columns is-variable is-5">
         <div class="column is-half">
           <figure style="text-align:center;">
-            <img src="static/images/time.png" alt="Time" class="equal-img">
-            <figcaption class="fig-caption">(c) Ablation: Thinking vs. Non-Thinking vs. Adaptive.</figcaption>
+            <img src="static/images/perf_3.jpg" alt="Ablation study" style="width:100%; height:auto;">
+            <figcaption style="font-size:0.9em; margin-top:6px; text-align:center;">
+              (c) Ablation: Thinking vs. Non-Thinking vs. Adaptive.
+            </figcaption>
           </figure>
         </div>
         <div class="column is-half">
           <figure style="text-align:center;">
-            <img src="static/images/result_fig.png" alt="Efficiency and inference time" class="equal-img">
-            <figcaption class="fig-caption">(d) Efficiency: inference time and overhead reduction.</figcaption>
+            <img src="static/images/perf_4.jpg" alt="Efficiency and inference time" style="width:100%; height:auto;">
+            <figcaption style="font-size:0.9em; margin-top:6px; text-align:center;">
+              (d) Efficiency: inference time and overhead reduction.
+            </figcaption>
           </figure>
         </div>
       </div>
@@ -312,6 +300,7 @@
     </div>
   </div>
 </section>
+
 
 
 
