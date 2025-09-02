@@ -286,20 +286,21 @@
         </div>
       </div>
 
-      <!-- Description -->
+      <!-- Description replaced with bullet summary -->
       <div class="content" style="text-align:left; font-size:1em;">
-        <p>
-          AdaThinkDrive demonstrates strong performance across both accuracy and efficiency. In the vision-only
-          setting, it achieves state-of-the-art PDMS compared to strong baselines. Best-of-N planning further
-          improves PDMS by selecting optimal trajectories. Ablation studies confirm that adaptive thinking
-          surpasses always-think and never-think strategies, while efficiency analysis shows reduced inference
-          time without compromising decision quality.
-        </p>
+        <h4><strong>AdaThinkDrive: Balancing Accuracy and Efficiency</strong></h4>
+        <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px;">
+          <li><strong>Table 2 (Overall Performance):</strong> AdaThinkDrive achieves the best overall PDMS, surpassing both Non-Think RL and Think RL baselines.</li>
+          <li><strong>Table 4 (By Scenario Level):</strong> AdaThinkDrive outperforms Non-Think RL in simple scenarios and Think RL in challenging ones, highlighting its superior adaptability.</li>
+          <li><strong>Figure (Mode Ratio):</strong> On the test set, AdaThinkDrive flexibly allocates reasoning modes—favoring Non-Think in simple cases for efficiency, while switching to Think mode in complex scenes for accuracy.</li>
+          <li><strong>Table (Efficiency):</strong> Compared to Think RL, AdaThinkDrive reduces inference time by 14% while also improving PDMS, proving its efficiency advantage.</li>
+        </ul>
       </div>
 
     </div>
   </div>
 </section>
+
 
 
 
