@@ -123,6 +123,24 @@
 </section>
 
 
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div style="text-align:center;">
+        <h2 class="title is-3">Method Overview</h2>
+      </div>
+      <br>
+      <div class="item">
+        <div style="text-align:center;">
+          <img src="static/images/fig2_co.jpg" alt="A descriptive alt text" style="width:80%; height:auto;"/>
+        </div>
+        <h1 style="width: 900px; font-size:1em; margin-left: 120px; ">We present AdaThinkDrive, an end-to-end autonomous driving framework that adapts its output mode—either Thinking or Non-Thinking—based on the complexity of the driving scenario. Given vision and text inputs, the VLM dynamically selects its output mode through adaptive selection. During the reinforcement learning of the three-stage training process, multiple reward signals including PDMS, format, and endpoint are combined with the proposed Adaptive Think Reward.</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -141,31 +159,49 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <!-- Section Title -->
       <div style="text-align:center;">
-        <h2 class="title is-3">Method Overview</h2>
+        <h2 class="title is-3">Training Stages</h2>
       </div>
       <br>
+
       <div class="item">
-        <div style="text-align:center;">
-          <img src="static/images/fig2_co.jpg" alt="A descriptive alt text" style="width:80%; height:auto;"/>
+        <!-- Image above the text -->
+        <div style="text-align:center; margin: 8px 0 12px;">
+          <img src="static/images/fig3.jpg" alt="Overview of the three training stages" style="width:80%; height:auto;" />
         </div>
-        <h1 style="width: 900px; font-size:1em; margin-left: 120px;">We present AdaThinkDrive, an end-to-end autonomous driving framework that adapts its output mode—either Thinking or Non-Thinking—based on the complexity of the driving scenario. 
-          Given vision and text inputs, the VLM dynamically selects its output mode through adaptive selection. During the reinforcement learning of the three-stage training process, multiple reward signals including PDMS, format, and endpoint are combined with the proposed Adaptive Think Reward.</h1>
+
+        <!-- Bullet text -->
+        <p><strong>Three Training Stages:</strong></p>
+        <ul style="margin-left: 20px;">
+          <li>
+            <strong>Pre-Training (PT)</strong> learns from large-scale driving data to build visual-language grounding and driving commonsense, preparing the model for downstream planning.
+          </li>
+          <li>
+            <strong>Supervised Fine-Tuning (SFT)</strong> trains the model to produce both <em>Thinking</em> and <em>Non-Thinking</em> outputs, enabling dual-mode reasoning for perception-to-action decisions.
+          </li>
+          <li>
+            <strong>Reinforcement Learning (RL/GRPO)</strong>
+            uses task-specific rewards ( <strong>PDMS</strong>, <strong>Format</strong>, <strong>Endpoint</strong>, <strong>Adaptive Think Reward</strong> ) to improve decision quality and trajectory prediction while reducing unnecessary reasoning.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 
+
 <!-- experiment -->
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container" style="width: 80%;">
+    <div class="container">
       <!-- Main Title -->
       <div style="text-align:center;">
         <h2 class="title is-3">Experiment</h2>
@@ -185,8 +221,8 @@
       <!-- Text Below Image -->
       <div class="columns">
         <div class="column is-full">
-          <p style="width: 900px; font-size:1em; margin-left: 120px;">
-            <ul style="text-align:left; margin-left: 20px;">  
+          <p style="text-align:center; font-size: 1em;">
+            <ul style="text-align:left; margin-left: 20px;">
               <li>AdaThinkDrive achieves a PDMS of 90.3 in the vision-only setting, setting a new SOTA. It improves PDMS by 1.7 over Hydra-NeXt, showing better modeling and trajectory prediction.</li>
               <li>In best-of-N planning, AdaThinkDrive selects the optimal trajectory from four candidates, reaching a PDMS of 93.0.</li>
             </ul>
@@ -208,7 +244,7 @@
       <!-- Text Below Image -->
       <div class="columns">
         <div class="column is-full">
-          <p style="width: 900px; font-size:1em; margin-left: 120px;">
+          <p style="text-align:center; font-size: 1em;">
             Qualitative comparisons of trajectory predictions on the NAVSIM dataset. We compare AdaThinkDrive with the Think RL model in a simple scenario (top), and with the Non-Think RL model in a challenging scenario (bottom). Each example shows the input image, driving command, reasoning content (if any), and the predicted trajectory. Green, blue, and red represent the ground-truth, AdaThinkDrive planning, and Think/Non-Think Model planning, respectively.
           </p>
         </div>
@@ -219,23 +255,6 @@
 </section>
 
 
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div style="text-align:center;">
-        <h2 class="title is-3">Experiment</h2>
-      </div>
-      <br>
-      <div class="item">
-        <div style="text-align:center;">
-          <img src="static/images/fig6.jpg" alt="A descriptive alt text" style="width:80%; height:auto;"/>
-        </div>
-        <h1 style="text-align:center; width: 900px; margin: 0 auto; font-size:1em; ">Qualitative comparisons of trajectory predictions on the NAVSIM dataset. We compare AdaThinkDrive with the Think RL model in a simple scenario (top), and with the Non-Think RL model in a challenging scenario (bottom). Each example shows the input image, driving command, reasoning content (if any), and the predicted trajectory. Green, blue, and red represent the ground-truth, AdaThinkDrive planning, and Think/Non-Think Model planning, respectively.</h1>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- End image carousel -->
