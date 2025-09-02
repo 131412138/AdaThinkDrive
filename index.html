@@ -184,7 +184,7 @@
             <strong>Supervised Fine-Tuning (SFT)</strong> trains the model to produce both <em>Thinking</em> and <em>Non-Thinking</em> outputs, enabling dual-mode reasoning for perception-to-action decisions.
           </li>
           <li>
-            <strong>Reinforcement Learning (RL/GRPO)</strong>
+            <strong>Reinforcement Learning (RL)</strong>
             uses task-specific rewards ( <strong>PDMS</strong>, <strong>Format</strong>, <strong>Endpoint</strong>, <strong>Adaptive Think Reward</strong> ) to improve decision quality and trajectory prediction while reducing unnecessary reasoning.
           </li>
         </ul>
@@ -246,6 +246,67 @@
             Qualitative comparisons of trajectory predictions on the NAVSIM dataset. We compare AdaThinkDrive with the Think RL model in a simple scenario (top), and with the Non-Think RL model in a challenging scenario (bottom). Each example shows the input image, driving command, reasoning content (if any), and the predicted trajectory. Green, blue, and red represent the ground-truth, AdaThinkDrive planning, and Think/Non-Think Model planning, respectively.
           </p>
         </div>
+      </div>
+
+      <!-- Third section: Performance Analysis -->
+      <h3 class="title is-4" style="text-align:left;">Performance Analysis of AdaThinkDrive</h3>
+      <br>
+
+      <style>
+        .equal-img {
+          width: 400px;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+        .fig-caption {
+          font-size: 0.9em;
+          margin-top: 6px;
+          text-align: center;
+        }
+      </style>
+
+      <!-- Row 1 -->
+      <div class="columns is-variable is-5">
+        <div class="column is-half">
+          <figure style="text-align:center;">
+            <img src="static/images/result2.png" alt="Vision-only PDMS comparison" class="equal-img">
+            <figcaption class="fig-caption">(a) Vision-only PDMS vs. baselines on Navsim.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half">
+          <figure style="text-align:center;">
+            <img src="static/images/result3.png" alt="Best-of-N planning results" class="equal-img">
+            <figcaption class="fig-caption">(b) Best-of-N planning (N=4) performance.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="columns is-variable is-5">
+        <div class="column is-half">
+          <figure style="text-align:center;">
+            <img src="static/images/time.png" alt="Time" class="equal-img">
+            <figcaption class="fig-caption">(c) Ablation: Thinking vs. Non-Thinking vs. Adaptive.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half">
+          <figure style="text-align:center;">
+            <img src="static/images/result_fig.png" alt="Efficiency and inference time" class="equal-img">
+            <figcaption class="fig-caption">(d) Efficiency: inference time and overhead reduction.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="content" style="text-align:left; font-size:1em;">
+        <p>
+          AdaThinkDrive demonstrates strong performance across both accuracy and efficiency. In the vision-only
+          setting, it achieves state-of-the-art PDMS compared to strong baselines. Best-of-N planning further
+          improves PDMS by selecting optimal trajectories. Ablation studies confirm that adaptive thinking
+          surpasses always-think and never-think strategies, while efficiency analysis shows reduced inference
+          time without compromising decision quality.
+        </p>
       </div>
 
     </div>
