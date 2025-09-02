@@ -176,7 +176,7 @@
 
         <!-- Bullet text -->
         <p><strong>Three Training Stages:</strong></p>
-        <ul style="margin-left: 20px;">
+        <ul style="list-style-type: disc; margin-left: 40px; padding-left: 20px;">
           <li>
             <strong>Pre-Training (PT)</strong> learns from large-scale driving data to build visual-language grounding and driving commonsense, preparing the model for downstream planning.
           </li>
@@ -185,7 +185,7 @@
           </li>
           <li>
             <strong>Reinforcement Learning (RL)</strong>
-            uses task-specific rewards ( <strong>PDMS</strong>, <strong>Format</strong>, <strong>Endpoint</strong>, <strong>Adaptive Think Reward</strong> ) to improve decision quality and trajectory prediction while reducing unnecessary reasoning.
+            uses task-specific rewards (<strong>PDMS</strong>, <strong>Format</strong>, <strong>Endpoint</strong>, <strong>Adaptive Think Reward</strong>) to improve decision quality and trajectory prediction while reducing unnecessary reasoning.
           </li>
         </ul>
       </div>
@@ -250,17 +250,17 @@
       <div class="columns is-variable is-5">
         <div class="column is-half">
           <figure style="text-align:center;">
-            <img src="static/images/perf_1.jpg" alt="Vision-only PDMS comparison" style="width:100%; height:auto;">
+            <img src="static/images/result2.png" alt="Comparison of Think and Non-Think Models in SFT and RL" style="width:100%; height:auto;">
             <figcaption style="font-size:0.9em; margin-top:6px; text-align:center;">
-              (a) Vision-only PDMS vs. baselines on Navsim.
+              (a) Comparison of Think and Non-Think Models in SFT and RL.
             </figcaption>
           </figure>
         </div>
         <div class="column is-half">
           <figure style="text-align:center;">
-            <img src="static/images/perf_2.jpg" alt="Best-of-N planning results" style="width:100%; height:auto;">
+            <img src="static/images/result3.png" alt="Comparison of Think and Non-Think RL Models in Simple (Level 1) and Challenging (Level 3) Scenarios." style="width:100%; height:auto;">
             <figcaption style="font-size:0.9em; margin-top:6px; text-align:center;">
-              (b) Best-of-N planning (N=4) performance.
+              (b) Comparison of Think and Non-Think RL Models in Simple (Level 1) and Challenging (Level 3) Scenarios.
             </figcaption>
           </figure>
         </div>
@@ -270,17 +270,17 @@
       <div class="columns is-variable is-5">
         <div class="column is-half">
           <figure style="text-align:center;">
-            <img src="static/images/perf_3.jpg" alt="Ablation study" style="width:100%; height:auto;">
+            <img src="static/images/time.png" alt="Comparison of inference time and PDMS between Think Model and AdaThinkDrive" style="width:100%; height:auto;">
             <figcaption style="font-size:0.9em; margin-top:6px; text-align:center;">
-              (c) Ablation: Thinking vs. Non-Thinking vs. Adaptive.
+              (c) Comparison of inference time and PDMS between Think Model and AdaThinkDrive.
             </figcaption>
           </figure>
         </div>
         <div class="column is-half">
           <figure style="text-align:center;">
-            <img src="static/images/perf_4.jpg" alt="Efficiency and inference time" style="width:100%; height:auto;">
+            <img src="static/images/result_fig.png" alt="The ratio of Think vs. Non-Think choices by AdaThinkDrive across different Navsim test dataset levels." style="width:100%; height:auto;">
             <figcaption style="font-size:0.9em; margin-top:6px; text-align:center;">
-              (d) Efficiency: inference time and overhead reduction.
+              (d) The ratio of Think vs. Non-Think choices by AdaThinkDrive across different Navsim test dataset levels.
             </figcaption>
           </figure>
         </div>
