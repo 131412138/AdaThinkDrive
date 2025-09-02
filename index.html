@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">AdaThinkDrive: Adaptive Thinking via Reinforcement Learning for Autonomous Driving</h1>
+            <h1 class="title is-1 publication-title" style="white-space: nowrap;">AdaThinkDrive: Adaptive Thinking via Reinforcement Learning for Autonomous Driving</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -123,23 +123,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -148,7 +131,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            While reasoning technology like Chain-of-Thought (CoT) has been widely adopted in Vision-Language-Action (VLA) models, it demonstrates promising capabilities in end-to-end autonomous driving. However, recent efforts to integrate CoT reasoning often fall short in simple scenarios, introducing unnecessary computational overhead without improving decision quality. To address this, we propose <strong>AdaThinkDrive</strong>, a novel VLA framework with a dual-mode reasoning mechanism inspired by fast and slow thinking. First, our framework is pretrained on large-scale autonomous driving (AD) scenarios using both question-answering (QA) and trajectory datasets to acquire world knowledge and driving commonsense. During supervised fine-tuning (SFT), we introduce a two-mode dataset—fast answering (w/o CoT) and slow thinking (with CoT), enabling the model to distinguish between scenarios that require reasoning. Furthermore, an <em>Adaptive Think Reward</em> strategy is proposed in conjunction with the <em>Group Relative Policy Optimization (GRPO)</em>, which rewards the model for selectively applying CoT by comparing trajectory quality across different reasoning modes. Extensive experiments on the <strong>Navsim benchmark</strong> show that AdaThinkDrive achieves a PDM score of <strong>90.3</strong>, surpassing the best vision-only baseline by <strong>1.7</strong> points. Moreover, ablations show that AdaThinkDrive surpasses both the never-Think and always-Think baselines, improving PDMS by 2.0 and 1.4, respectively. It also reduces inference time by <strong>14%</strong> compared to the always-Think baseline, demonstrating its ability to balance accuracy and efficiency through adaptive reasoning.
           </p>
         </div>
       </div>
@@ -162,38 +145,23 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+      <div style="text-align:center;">
+        <h2 class="title is-3">Method Overview</h2>
       </div>
+      <br>
       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+        <div style="text-align:center;">
+          <img src="static/images/fig2_co.jpg" alt="A descriptive alt text" style="width:80%; height:auto;"/>
+        </div>
+
+   
+        <h1 style="text-align:center; width: 900px; margin: 0 auto; font-size:1em; ">We present AdaThinkDrive, an end-to-end autonomous driving framework that adapts its output mode—either Thinking or Non-Thinking—based on the complexity of the driving scenario. 
+          Given vision and text inputs, the VLM dynamically selects its output mode through adaptive selection. During the reinforcement learning of the three-stage training process, multiple reward signals including PDMS, format, and endpoint are combined with the proposed Adaptive Think Reward.</h1>
+
+
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 
